@@ -6,8 +6,8 @@
       "name": "BLEFinder",
       "bundleIdentifier": "com.cinnamobot.blefinder",
       "developerName": "shafuneko",
-      "version": "1.4",
-      "versionDate": "2026-11-10T04:39:48Z",
+      "version": "1.5",
+      "versionDate": "2026-11-10T05:27:42Z",
       "downloadURL": "https://github.com/shafuneko/blefinder/releases/latest/download/BLEFinder-unsigned.ipa",
       "localizedDescription": "BLE direction finder: multilaterates a BLE target from RSSI while you walk."
     },
