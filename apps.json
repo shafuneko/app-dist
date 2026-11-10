@@ -8,7 +8,7 @@
       "developerName": "Cinnamobot",
       "version": "1.4",
       "versionDate": "2026-11-10T04:39:48Z",
-      "downloadURL": "https://github.com/Cinnamobot/app-dist/releases/latest/download/BLEFinder-unsigned.ipa",
+      "downloadURL": "https://github.com/Cinnamobot/blefinder/releases/latest/download/BLEFinder-unsigned.ipa",
       "localizedDescription": "BLE direction finder: multilaterates a BLE target from RSSI while you walk."
     },
     {
@@ -17,7 +17,7 @@
       "developerName": "Cinnamobot",
       "version": "1.2",
       "versionDate": "2026-11-10T04:40:37Z",
-      "downloadURL": "https://github.com/Cinnamobot/app-dist/releases/latest/download/PhonePad-unsigned.ipa",
+      "downloadURL": "https://github.com/Cinnamobot/phonepad/releases/latest/download/PhonePad-unsigned.ipa",
       "localizedDescription": "iPhone trackpad and flick keyboard for Windows over BLE."
     }
   ]
