@@ -4,11 +4,11 @@ This repo only hosts the combined AltStore / SideStore **source JSON** for my ap
 
 ## Source URL (add this to SideStore / AltStore)
 
-https://raw.githubusercontent.com/Cinnamobot/app-dist/main/apps.json
+https://raw.githubusercontent.com/shafuneko/app-dist/main/apps.json
 
 ## Apps
 
-- **BLEFinder** — https://github.com/Cinnamobot/blefinder
-  Direct IPA (always latest): https://github.com/Cinnamobot/blefinder/releases/latest/download/BLEFinder-unsigned.ipa
-- **PhonePad** — https://github.com/Cinnamobot/phonepad
-  Direct IPA (always latest): https://github.com/Cinnamobot/phonepad/releases/latest/download/PhonePad-unsigned.ipa
+- **BLEFinder** — https://github.com/shafuneko/blefinder
+  Direct IPA (always latest): https://github.com/shafuneko/blefinder/releases/latest/download/BLEFinder-unsigned.ipa
+- **PhonePad** — https://github.com/shafuneko/phonepad
+  Direct IPA (always latest): https://github.com/shafuneko/phonepad/releases/latest/download/PhonePad-unsigned.ipa
