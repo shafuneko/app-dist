@@ -1,0 +1,51 @@
+name: Sync apps.json
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Regenerate apps.json from the app repos' latest releases
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          BV=$(gh -R shafuneko/blefinder release list --limit 30 --json tagName,publishedAt --jq 'map(select(.tagName != "latest")) | .[0]')
+          PV=$(gh -R shafuneko/phonepad release list --limit 30 --json tagName,publishedAt --jq 'map(select(.tagName != "latest")) | .[0]')
+          BT=$(echo "$BV" | jq -r '.tagName | ltrimstr("v")'); BD=$(echo "$BV" | jq -r '.publishedAt')
+          PT=$(echo "$PV" | jq -r '.tagName | ltrimstr("v")'); PD=$(echo "$PV" | jq -r '.publishedAt')
+          jq -n \
+            --arg bv "$BT" --arg bd "$BD" --arg pv "$PT" --arg pd "$PD" '
+            {name: "shafuneko Apps",
+             identifier: "com.cinnamobot.appdist",
+             apps: [
+               {name: "BLEFinder", bundleIdentifier: "com.cinnamobot.blefinder", developerName: "shafuneko",
+                version: $bv, versionDate: $bd,
+                downloadURL: "https://github.com/shafuneko/blefinder/releases/latest/download/BLEFinder-unsigned.ipa",
+                localizedDescription: "BLE direction finder: multilaterates a BLE target from RSSI while you walk."},
+               {name: "PhonePad", bundleIdentifier: "com.cinnamobot.phonepad", developerName: "shafuneko",
+                version: $pv, versionDate: $pd,
+                downloadURL: "https://github.com/shafuneko/phonepad/releases/latest/download/PhonePad-unsigned.ipa",
+                localizedDescription: "iPhone trackpad and flick keyboard for Windows over BLE."}
+             ]}' > apps.json
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet apps.json; then
+            echo "apps.json is current; nothing to do."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add apps.json
+          git commit -m "Update apps.json"
+          git push
