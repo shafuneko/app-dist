@@ -1,14 +1,14 @@
 # app-dist
 
-Unsigned IPA distribution for my own iOS builds. The source repositories stay private; only the built IPAs are published here.
+This repo only hosts the combined AltStore / SideStore **source JSON** for my apps. The apps themselves live in their own public repositories — the JSON points straight at each repo's latest release, so there are no mirrored copies here.
 
-## Always-latest download URLs
-
-- **BLEFinder**: https://github.com/Cinnamobot/app-dist/releases/latest/download/BLEFinder-unsigned.ipa
-- **PhonePad**: https://github.com/Cinnamobot/app-dist/releases/latest/download/PhonePad-unsigned.ipa
-
-Paste a URL into your installer (Zeus / zcontainer etc.) instead of downloading files — the URL never changes and always points at the newest build, so nothing piles up in Downloads.
-
-## SideStore / AltStore source
+## Source URL (add this to SideStore / AltStore)
 
 https://raw.githubusercontent.com/Cinnamobot/app-dist/main/apps.json
+
+## Apps
+
+- **BLEFinder** — https://github.com/Cinnamobot/blefinder
+  Direct IPA (always latest): https://github.com/Cinnamobot/blefinder/releases/latest/download/BLEFinder-unsigned.ipa
+- **PhonePad** — https://github.com/Cinnamobot/phonepad
+  Direct IPA (always latest): https://github.com/Cinnamobot/phonepad/releases/latest/download/PhonePad-unsigned.ipa
