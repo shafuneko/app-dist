@@ -1,0 +1,24 @@
+{
+  "name": "Cinnamobot Apps",
+  "identifier": "com.cinnamobot.appdist",
+  "apps": [
+    {
+      "name": "BLEFinder",
+      "bundleIdentifier": "com.cinnamobot.blefinder",
+      "developerName": "Cinnamobot",
+      "version": "1.4",
+      "versionDate": "2026-11-10T05:00:00Z",
+      "downloadURL": "https://github.com/Cinnamobot/app-dist/releases/latest/download/BLEFinder-unsigned.ipa",
+      "localizedDescription": "BLE direction finder: multilaterates a BLE target from RSSI while you walk."
+    },
+    {
+      "name": "PhonePad",
+      "bundleIdentifier": "com.cinnamobot.phonepad",
+      "developerName": "Cinnamobot",
+      "version": "1.2",
+      "versionDate": "2026-11-10T05:00:00Z",
+      "downloadURL": "https://github.com/Cinnamobot/app-dist/releases/latest/download/PhonePad-unsigned.ipa",
+      "localizedDescription": "iPhone trackpad and flick keyboard for Windows over BLE."
+    }
+  ]
+}
