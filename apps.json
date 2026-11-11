@@ -15,8 +15,8 @@
       "name": "PhonePad",
       "bundleIdentifier": "com.cinnamobot.phonepad",
       "developerName": "shafuneko",
-      "version": "2.1",
-      "versionDate": "2026-11-10T07:20:46Z",
+      "version": "2.2",
+      "versionDate": "2026-11-11T01:35:55Z",
       "downloadURL": "https://github.com/shafuneko/phonepad/releases/latest/download/PhonePad-unsigned.ipa",
       "localizedDescription": "iPhone trackpad and flick keyboard for Windows over BLE."
     }
